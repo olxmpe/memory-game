@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+body {
+    margin: 0; 
+    background-color:#101010;
+    font-family: 'Inter', sans-serif;
+    font-weight:300;
+    text-transform:uppercase;
+    color:white;
+  }
+  
+  #memory-board {
+    width:1200px;
+    margin:auto;
+    text-align: center;
+  }
+  
+  .card {
+    display: inline-block;
+    perspective: 300px;
+    transform-style: preserve-3d;
+    position: relative;
+    margin:10px;
+  }
+  
+  .card.turned {
+    pointer-events: none;
+  }
+  
+  .card.turned .front {
+    transform: rotateY(0deg);
+  }
+  .card.turned .back {
+    transform: rotateY(180deg);
+  }
+  
+  .card .back,
+  .card .front {
+    width: 175px;
+    height: 264px;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.853);
+
+    transition: transform 0.6s ease;
+  }
+  
+  .card .back {
+    background-image:url('assets1x/Default.png');
+    background-size:cover;
+  }
+  
+  .card .front {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotateY(-180deg) translateZ(1px);
+    backface-visibility: hidden;
+  }
+  
+  #score {
+
+    font-size: 1,5rem;
+    text-align: center;
+    font-weight:400;
+  }
+  
+  h1 {
+    margin-top:70px;
+    margin-bottom:70px;
+    font-weight: 300;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing:10px;
+  }
+
+  
