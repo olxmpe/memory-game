@@ -60,12 +60,16 @@ const cards = [
           }
   
           document.querySelector('#pairs-clicked').textContent = memoryGame.pairsClicked
-          document.querySelector('#pairs-guessed').textContent = memoryGame.pairsGuessed
         }
   
   
         if (memoryGame.checkIfFinished()) {
-  
+            setTimeout(() => { 
+            document.querySelector('.hidden').classList.remove('hidden')
+            document.querySelector('#memory-board').classList.add('hidden')
+            document.querySelector('#score').classList.add('hidden')
+        }, 2000)
+            
         }
   
         } 

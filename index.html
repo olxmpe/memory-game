@@ -4,24 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Superhero Memory Game</title>
-    <link rel="stylesheet" href="style.css">
+    <title>MEMORY</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div>
       <h1>Memory</h1>
     </div>
-    
+
     <div id="memory-board"></div>
 
     <div id="score">
       <p><span id="pairs-clicked">0</span> shots</p>
     </div>
-    
+
     <script src="memory.js"></script>
     <script src="index.js"></script>
+
+    <div class="hidden" id="final-screen">
+      <img src = /assets1x/big-snake.png>
+      <p>I took you 26 shots, try to do better!</p>
+      <button>start</button>
+    </div>
   </body>
-  <dialog id="modal">
-    You won !
-  </dialog>
 </html>

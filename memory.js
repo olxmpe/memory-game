@@ -33,10 +33,10 @@ class MemoryGame {
     }
   
     checkIfFinished() {
+  // to be changed back to (this.pairsGuessed < this.cards.length/2 ) / (this.pairsGuessed === this.cards.length/2 )
   
-  
-      if (this.pairsGuessed < this.cards.length/2 ) {
-        return false} else if (this.pairsGuessed === this.cards.length/2 ) {
+      if (this.pairsGuessed > 1) {
+        return false} else if (this.pairsGuessed === 1) {
         return true;
       } 
     }
