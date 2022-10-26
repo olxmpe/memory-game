@@ -8,23 +8,39 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <canvas id="canvas" class="hidden"></canvas>
     <div>
       <h1>Memory</h1>
     </div>
 
-    <div id="memory-board"></div>
-
-    <div id="score">
-      <p><span id="pairs-clicked">0</span> shots</p>
+    <div id="first-screen">
+      <img src = /assets1x/big-snake.png>
+      <p>
+        The rules are simple: click on a card to turn it over, and try to find
+        its pair among the others. If you find all the pairs, you win.
+      </p>
+      <button a href="/">Play</button>
     </div>
 
-    <script src="memory.js"></script>
-    <script src="index.js"></script>
+    <div id="memory-board" class=""></div>
+
+    <div id="score" class="hidden">
+      <p><span class="pairs-clicked">0</span> shots</p>
+    </div>
 
     <div class="hidden" id="final-screen">
       <img src = /assets1x/big-snake.png>
-      <p>I took you 26 shots, try to do better!</p>
-      <button>start</button>
+      <p>
+        I took you <span class="pairs-clicked">0</span> shots, try to do better
+        next time!
+      </p>
+      <button a href="/">Play</button>
     </div>
+
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
   </body>
+  <script src="memory.js"></script>
+  <script src="index.js"></script>
+  <script src="bg.js"></script>
 </html>

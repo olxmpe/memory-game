@@ -40,5 +40,4 @@ class MemoryGame {
         return true;
       } 
     }
-  }
-  
+  }  
