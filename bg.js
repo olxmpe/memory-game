@@ -1,6 +1,6 @@
 window.onload = () => {
-  const animation = new Animation();
-  animation.startAnimation();
+ // const animation = new Animation();
+  //animation.startAnimation();
 };
 
 class Animation {
@@ -25,7 +25,7 @@ class Animation {
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
       this.frames++;
 
-      if (this.frames % 60 === 0) {
+      if (this.frames % 60 === 0 && memoryGame.checkIfFinished()) {
         this.cards.push(new Cards(this.canvas, this.ctx));
       }
       for (let i = 0; i < this.cards.length; i++) {
@@ -33,6 +33,7 @@ class Animation {
         this.emptyArray(card, i);
         card.draw();
         card.move();
+        console.log(this.cards)
       }
     }, 1000 / 900);
   }

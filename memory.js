@@ -4,7 +4,7 @@ class MemoryGame {
       this.pickedCards = [];
       this.pairsClicked = 0;
       this.pairsGuessed = 0;
-      this.shots = 0;
+
     }
   
     shuffleCards() {

@@ -58,7 +58,7 @@ document.querySelector("button").addEventListener("click", (event) => {
     card.addEventListener("click", () => {
       if (memoryGame.pickedCards.length < 2) {
         memoryGame.pickedCards.push(card);
-        console.dir(memoryGame.pickedCards);
+        
         card.classList.add("turned");
         if (memoryGame.pickedCards.length === 2) {
           let result = memoryGame.checkIfPair(
@@ -87,15 +87,37 @@ document.querySelector("button").addEventListener("click", (event) => {
             document.querySelector("#final-screen ").classList.remove("hidden");
             document.querySelector("#memory-board").classList.add("hidden");
             document.querySelector("#score").classList.add("hidden");
-          }, 2000);
+               }, 2000);
+
+           let theTimeOut = setTimeout (() => {
+            const animation = new Animation();
+            animation.startAnimation();
+           },2000)   
+
+          
 
           document.querySelector("#final-screen button").addEventListener("click", (event) => {
-            window.location.reload();
+            // window.location.reload(); 
+            document.querySelector("#memory-board").classList.remove("hidden");
+            document.querySelector("#final-screen").classList.add("hidden");
+            document.querySelector("#score").classList.remove("hidden");
+            document.querySelector("#canvas").classList.add("hidden");
+            memoryGame.pickedCards = [];
+            clearTimeout(theTimeOut)
+            console.log(theTimeOut)
+            memoryGame.pairsClicked = 0;
+            document.querySelector(".pairs-clicked").textContent = memoryGame.pairsClicked
+            memoryGame.pairsGuessed = 0
+            document.querySelectorAll(".turned").forEach((elem) => {
+              elem.classList.remove('turned')
+            })
+
+
           })
         }
       }
 
-      console.log(`Card clicked: ${card}`);
+   
     });
   });
 });
