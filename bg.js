@@ -51,7 +51,7 @@ class Cards {
     this.x = Math.floor(Math.random() * this.canvas.width);
     this.y = -200;
     this.img = new Image();
-    this.img.src = "assets1x/big-default.png";
+    this.img.src = "assets1x/Big-default.png";
     this.angle = ((Math.random() * 30 - 20) * Math.PI) / 180;
   }
 
